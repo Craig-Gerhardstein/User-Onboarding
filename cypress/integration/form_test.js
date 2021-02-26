@@ -9,7 +9,7 @@ describe('user-onboarding', () => {
     const passwordInput = () => cy.get('input[name=password]')
     const termsInput = () => cy.get('input[name=termsOfService]')
     const submitBtn = () => cy.get('button[id=submitBtn]')
-    const errorDiv = () => cy.get('div[name=errors]')
+    
 
     it('sanity check', () => {
         expect(1+1).to.equal(2)
@@ -21,7 +21,7 @@ describe('user-onboarding', () => {
         emailInput().type('check@email.com')
         passwordInput().type('testpassword')
         termsInput().click()
-        errorDiv().should('have.value', '')
+        
         submitBtn().click()
     })
 
