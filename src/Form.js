@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Form(props) {
-    const{ values, submit, change, disabled, errors,} = props
+    const{ values, submit, change, disabled, errors} = props
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -19,7 +19,7 @@ function Form(props) {
         <form className= 'form container' onSubmit={onSubmit}>
             <div className= 'form title'>
                 <h2>User Sign Up</h2>
-                <button disabled={disabled}>Submit</button>
+                <button id='submitBtn' disabled={disabled}>Submit</button>
                 <div className= 'errors'>
                     <div>{errors.first_name}</div>
                     <div>{errors.last_name}</div>
